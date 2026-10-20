@@ -1,0 +1,67 @@
+{
+  "name": "claude-hwp-plugin-mcp",
+  "version": "0.1.0",
+  "description": "MCP Server for HWP/HWPX Korean document control via Claude Code. Supports reading, form auto-fill, batch generation, document creation, and comparison.",
+  "type": "module",
+  "main": "./dist/index.js",
+  "bin": {
+    "claude-hwp-mcp": "dist/index.js"
+  },
+  "files": [
+    "dist/index.js",
+    "dist/index.d.ts",
+    "dist/index.js.map",
+    "dist/index.d.ts.map",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "start": "node dist/index.js",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "hwp",
+    "hwpx",
+    "korean",
+    "document",
+    "kordoc",
+    "mcp",
+    "model-context-protocol",
+    "claude",
+    "claude-code",
+    "form-fill",
+    "한글"
+  ],
+  "author": {
+    "name": "hyunminlee",
+    "url": "https://github.com/hyunmin625"
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/hyunmin625/claude-hwp-plugin#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hyunmin625/claude-hwp-plugin.git"
+  },
+  "bugs": {
+    "url": "https://github.com/hyunmin625/claude-hwp-plugin/issues"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.28.0",
+    "kordoc": "^1.6.0",
+    "pdfjs-dist": "^5.6.205",
+    "zod": "^3.23.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "@vitest/coverage-v8": "^2.1.9",
+    "typescript": "^5.5.0",
+    "vitest": "^2.1.9"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
